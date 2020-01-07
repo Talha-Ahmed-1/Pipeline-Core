@@ -1,0 +1,47 @@
+circuit EX_MEM_Reg : @[:@2.0]
+  module EX_MEM_Reg : @[:@3.2]
+    input clock : Clock @[:@4.4]
+    input reset : UInt<1> @[:@5.4]
+    input io_rs2_in : SInt<32> @[:@6.4]
+    output io_rs2_out : SInt<32> @[:@6.4]
+    input io_alu_in : SInt<32> @[:@6.4]
+    output io_alu_out : SInt<32> @[:@6.4]
+    input io_rd_in : SInt<5> @[:@6.4]
+    output io_rd_out : SInt<5> @[:@6.4]
+    input io_MemWrite_in : UInt<1> @[:@6.4]
+    input io_MemRead_in : UInt<1> @[:@6.4]
+    input io_RegWrite_in : UInt<1> @[:@6.4]
+    input io_MemtoReg_in : UInt<1> @[:@6.4]
+    output io_MemWrite_out : UInt<1> @[:@6.4]
+    output io_MemRead_out : UInt<1> @[:@6.4]
+    output io_RegWrite_out : UInt<1> @[:@6.4]
+    output io_MemtoReg_out : UInt<1> @[:@6.4]
+  
+    reg rs2reg : SInt<32>, clock with :
+      reset => (UInt<1>("h0"), rs2reg) @[EX_MEM_Reg.scala 26:29:@8.4]
+    reg alureg : SInt<32>, clock with :
+      reset => (UInt<1>("h0"), alureg) @[EX_MEM_Reg.scala 30:29:@12.4]
+    reg rdreg : SInt<5>, clock with :
+      reset => (UInt<1>("h0"), rdreg) @[EX_MEM_Reg.scala 34:28:@16.4]
+    reg MemWritereg : UInt<1>, clock with :
+      reset => (UInt<1>("h0"), MemWritereg) @[EX_MEM_Reg.scala 38:34:@20.4]
+    reg MemReadreg : UInt<1>, clock with :
+      reset => (UInt<1>("h0"), MemReadreg) @[EX_MEM_Reg.scala 39:33:@22.4]
+    reg RegWritereg : UInt<1>, clock with :
+      reset => (UInt<1>("h0"), RegWritereg) @[EX_MEM_Reg.scala 40:34:@24.4]
+    reg MemtoRegreg : UInt<1>, clock with :
+      reset => (UInt<1>("h0"), MemtoRegreg) @[EX_MEM_Reg.scala 41:34:@26.4]
+    io_rs2_out <= rs2reg @[EX_MEM_Reg.scala 28:20:@11.4]
+    io_alu_out <= alureg @[EX_MEM_Reg.scala 32:20:@15.4]
+    io_rd_out <= rdreg @[EX_MEM_Reg.scala 36:19:@19.4]
+    io_MemWrite_out <= MemWritereg @[EX_MEM_Reg.scala 44:25:@29.4]
+    io_MemRead_out <= MemReadreg @[EX_MEM_Reg.scala 46:24:@31.4]
+    io_RegWrite_out <= RegWritereg @[EX_MEM_Reg.scala 48:25:@33.4]
+    io_MemtoReg_out <= MemtoRegreg @[EX_MEM_Reg.scala 50:25:@35.4]
+    rs2reg <= io_rs2_in @[EX_MEM_Reg.scala 26:29:@9.4 EX_MEM_Reg.scala 27:16:@10.4]
+    alureg <= io_alu_in @[EX_MEM_Reg.scala 30:29:@13.4 EX_MEM_Reg.scala 31:16:@14.4]
+    rdreg <= io_rd_in @[EX_MEM_Reg.scala 34:28:@17.4 EX_MEM_Reg.scala 35:15:@18.4]
+    MemWritereg <= io_MemWrite_in @[EX_MEM_Reg.scala 38:34:@21.4 EX_MEM_Reg.scala 43:21:@28.4]
+    MemReadreg <= io_MemRead_in @[EX_MEM_Reg.scala 39:33:@23.4 EX_MEM_Reg.scala 45:20:@30.4]
+    RegWritereg <= io_RegWrite_in @[EX_MEM_Reg.scala 40:34:@25.4 EX_MEM_Reg.scala 47:21:@32.4]
+    MemtoRegreg <= io_MemtoReg_in @[EX_MEM_Reg.scala 41:34:@27.4 EX_MEM_Reg.scala 49:21:@34.4]

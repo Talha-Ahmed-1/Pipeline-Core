@@ -1,0 +1,10 @@
+[
+  {
+    "class":"firrtl.annotations.LoadMemoryAnnotation",
+    "target":"instfetch.instfetch.mem",
+    "fileName":"/home/talha/riscv/shaheen/abc.txt",
+    "hexOrBinary":{
+      "name":"h"
+    }
+  }
+]

@@ -1,0 +1,95 @@
+sbt
+test:runMain riscv.Launcher Pc
+test:runMain riscv.Launcher Top
+test:runMain riscv.Launcher Pc
+test:runMain riscv.Launcher Top
+sbt
+test:runMain riscv.Launcher Top
+test:runMain riscv.Launcher Top --backend-name verilator
+test:runMain riscv.Launcher Register
+test:runMain riscv.Launcher Top --backend-name verilator
+test:runMain riscv.Launcher MemoryD
+test:runMain riscv.Launcher MemoryD --backend-name verilator
+test:runMain riscv.Launcher Top --backend-name verilator
+test:runMain riscv.Launcher MemoryD
+test:runMain riscv.Launcher Top
+test:runMain riscv.Launcher Top --backend-name verilator
+test:runMain riscv.Launcher Top
+test:runMain riscv.Launcher Top --backend-name verilator
+test:runMain riscv.Launcher Pc
+test:runMain riscv.Launcher ImmGen
+test:runMain riscv.Launcher Top
+test:runMain riscv.Launcher Top --backend-name verilator
+test:runMain riscv.Launcher Top
+test:runMain riscv.Launcher Practice
+test:runMain riscv.Launcher Top --backend-name verilator
+test:runMain riscv.Launcher ImmGen --backend-name verilator
+test:runMain riscv.Launcher Pc
+test:runMain riscv.Launcher CntrlDecode
+test:runMain riscv.Launcher Control
+test:runMain riscv.Launcher Control --backend-name verilator
+test:runMain riscv.Launcher Control
+test:runMain riscv.Launcher Control --backend-name verilator
+test:runMain riscv.Launcher MainControl
+test:runMain riscv.Launcher MainControl --backend-name verilator
+test:runMain riscv.Launcher Top --backend-name verilator
+test:runMain riscv.Launcher Top
+test:runMain riscv.Launcher Top --backend-name verilator
+test:runMain riscv.Launcher MainControl
+test:runMain riscv.Launcher MainControl --backend-name verilator
+test:runMain riscv.Launcher CntrlDecode --backend-name verilator
+test:runMain riscv.Launcher CntrlDecode
+test:runMain riscv.Launcher CntrlDecode --backend-name verilator
+test:runMain riscv.Launcher Top --backend-name verilator
+test:runMain riscv.Launcher Top
+test:runMain riscv.Launcher Top --backend-name verilator
+test:runMain riscv.Launcher Top
+test:runMain riscv.Launcher Top --backend-name verilator
+test:runMain riscv.Launcher Top
+test:runMain riscv.Launcher Top --backend-name verilator
+test:runMain riscv.Launcher Top
+test:runMain riscv.Launcher Top --backend-name verilator
+test:runMain riscv.Launcher Top
+test:runMain riscv.Launcher Top --backend-name verilator
+test:runMain riscv.Launcher Top
+test:runMain riscv.Launcher Top --backend-name verilator
+test:runMain riscv.Launcher Top
+test:runMain riscv.Launcher Top --backend-name verilator
+test:runMain riscv.Launcher Alu
+test:runMain riscv.Launcher Top --backend-name verilator
+test:runMain riscv.Launcher MemoryD
+test:runMain riscv.Launcher Top
+test:runMain riscv.Launcher MemoryD
+test:runMain riscv.Launcher Top
+test:runMain riscv.Launcher MemoryD
+test:runMain riscv.Launcher Top
+test:runMain riscv.Launcher MemoryD
+test:runMain riscv.Launcher Top
+test:runMain riscv.Launcher MemoryD
+test:runMain riscv.Launcher Top
+test:runMain riscv.Launcher Top~
+test:runMain riscv.Launcher Top
+test:runMain riscv.Launcher Top --backend-name verilator
+test:runMain riscv.Launcher Register
+test:runMain riscv.Launcher Top
+test:runMain riscv.Launcher Top --backend-name verilator
+test:runMain riscv.Launcher Top
+test run:main riscv.Launcher Top
+test:runMain riscv.Launcher Top
+test:runMain riscv.Launcher instfetch
+test:runMain riscv.Launcher IF_ID_Reg
+test:runMain riscv.Launcher IF
+test:runMain riscv.Launcher IF_ID_Reg
+test:runMain riscv.Launcher MEM_WB_Reg
+test:runMain riscv.Launcher EX_MEM_Reg
+test:runMain riscv.Launcher ID_EX_Reg
+test:runMain riscv.Launcher Top
+test:runMain riscv.Launcher Top --backend-name Verilator
+test:runMain riscv.Launcher Top --backend-name verilator
+test:runMain riscv.Launcher IF_ID_Reg
+test:runMain riscv.Launcher Top1
+test:runMain riscv.Launcher Top1 --backend-name Verilator
+test:runMain riscv.Launcher Top1 --backend-name verilator
+test:runMain riscv.Launcher Top1
+test:runMain riscv.Launcher TopPipeline
+test:runMain riscv.Launcher TopPipeline --backend-name verilator

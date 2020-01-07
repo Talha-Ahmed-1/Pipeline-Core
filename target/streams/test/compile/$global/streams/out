@@ -1,0 +1,15 @@
+[0m[[0m[31merror[0m] [0m[0m/home/talha/riscv/pipeline/src/test/scala/riscv/TopPipelineTests.scala:5:27: not found: type TopPipelne[0m
+[0m[[0m[31merror[0m] [0m[0mclass TopPipelineTests(c: TopPipelne) extends PeekPokeTester(c) {[0m
+[0m[[0m[31merror[0m] [0m[0m                          ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/talha/riscv/pipeline/src/test/scala/riscv/Launcher.scala:11:18: type mismatch;[0m
+[0m[[0m[31merror[0m] [0m[0m found   : riscv.TopPipelineTests[0m
+[0m[[0m[31merror[0m] [0m[0m required: chisel3.iotesters.PeekPokeTester[riscv.TopPipeline][0m
+[0m[[0m[31merror[0m] [0m[0m          (c) => new TopPipelineTests(c)[0m
+[0m[[0m[31merror[0m] [0m[0m                 ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/talha/riscv/pipeline/src/test/scala/riscv/TopPipelineTests.scala:5:47: too many arguments for constructor Object: ()Object[0m
+[0m[[0m[31merror[0m] [0m[0mclass TopPipelineTests(c: TopPipelne) extends PeekPokeTester(c) {[0m
+[0m[[0m[31merror[0m] [0m[0m                                              ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/talha/riscv/pipeline/src/test/scala/riscv/TopPipelineTests.scala:6:2: not found: value step[0m
+[0m[[0m[31merror[0m] [0m[0m	step(6)[0m
+[0m[[0m[31merror[0m] [0m[0m	^[0m
+[0m[[0m[31merror[0m] [0m[0mfour errors found[0m

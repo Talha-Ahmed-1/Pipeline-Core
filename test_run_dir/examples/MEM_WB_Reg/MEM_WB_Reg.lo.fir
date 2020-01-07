@@ -1,0 +1,35 @@
+circuit MEM_WB_Reg : @[:@2.0]
+  module MEM_WB_Reg : @[:@3.2]
+    input clock : Clock @[:@4.4]
+    input reset : UInt<1> @[:@5.4]
+    input io_mem_in : SInt<32> @[:@6.4]
+    output io_mem_out : SInt<32> @[:@6.4]
+    input io_alu_in : SInt<32> @[:@6.4]
+    output io_alu_out : SInt<32> @[:@6.4]
+    input io_rd_in : SInt<5> @[:@6.4]
+    output io_rd_out : SInt<5> @[:@6.4]
+    input io_RegWrite_in : UInt<1> @[:@6.4]
+    output io_RegWrite_out : UInt<1> @[:@6.4]
+    input io_MemtoReg_in : UInt<1> @[:@6.4]
+    output io_MemtoReg_out : UInt<1> @[:@6.4]
+  
+    reg memreg : SInt<32>, clock with :
+      reset => (UInt<1>("h0"), memreg) @[MEM_WB_Reg.scala 20:29:@8.4]
+    reg alureg : SInt<32>, clock with :
+      reset => (UInt<1>("h0"), alureg) @[MEM_WB_Reg.scala 24:29:@12.4]
+    reg rdreg : SInt<5>, clock with :
+      reset => (UInt<1>("h0"), rdreg) @[MEM_WB_Reg.scala 28:28:@16.4]
+    reg RegWritereg : UInt<1>, clock with :
+      reset => (UInt<1>("h0"), RegWritereg) @[MEM_WB_Reg.scala 32:34:@20.4]
+    reg MemtoRegreg : UInt<1>, clock with :
+      reset => (UInt<1>("h0"), MemtoRegreg) @[MEM_WB_Reg.scala 33:34:@22.4]
+    io_mem_out <= memreg @[MEM_WB_Reg.scala 22:20:@11.4]
+    io_alu_out <= alureg @[MEM_WB_Reg.scala 26:20:@15.4]
+    io_rd_out <= rdreg @[MEM_WB_Reg.scala 30:19:@19.4]
+    io_RegWrite_out <= RegWritereg @[MEM_WB_Reg.scala 35:25:@25.4]
+    io_MemtoReg_out <= MemtoRegreg @[MEM_WB_Reg.scala 37:25:@27.4]
+    memreg <= io_mem_in @[MEM_WB_Reg.scala 20:29:@9.4 MEM_WB_Reg.scala 21:16:@10.4]
+    alureg <= io_alu_in @[MEM_WB_Reg.scala 24:29:@13.4 MEM_WB_Reg.scala 25:16:@14.4]
+    rdreg <= io_rd_in @[MEM_WB_Reg.scala 28:28:@17.4 MEM_WB_Reg.scala 29:15:@18.4]
+    RegWritereg <= io_RegWrite_in @[MEM_WB_Reg.scala 32:34:@21.4 MEM_WB_Reg.scala 34:21:@24.4]
+    MemtoRegreg <= io_MemtoReg_in @[MEM_WB_Reg.scala 33:34:@23.4 MEM_WB_Reg.scala 36:21:@26.4]
